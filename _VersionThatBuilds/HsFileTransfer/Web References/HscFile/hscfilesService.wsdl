@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://adapter.ejb.hsconnect.hs.tdr3.com/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://adapter.ejb.hsconnect.hs.tdr3.com/" name="hscfilesService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema>
+      <s:import schemaLocation="http://soap.hotschedules.com:8020/hsws/hscfiles?xsd=1" namespace="http://adapter.ejb.hsconnect.hs.tdr3.com/" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="operation">
+    <wsdl:part name="parameters" element="tns:operation" />
+  </wsdl:message>
+  <wsdl:message name="operationResponse">
+    <wsdl:part name="parameters" element="tns:operationResponse" />
+  </wsdl:message>
+  <wsdl:message name="persist">
+    <wsdl:part name="parameters" element="tns:persist" />
+  </wsdl:message>
+  <wsdl:message name="persistResponse">
+    <wsdl:part name="parameters" element="tns:persistResponse" />
+  </wsdl:message>
+  <wsdl:message name="processHSCFile">
+    <wsdl:part name="parameters" element="tns:processHSCFile" />
+  </wsdl:message>
+  <wsdl:message name="processHSCFileResponse">
+    <wsdl:part name="parameters" element="tns:processHSCFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="getHSCFile">
+    <wsdl:part name="parameters" element="tns:getHSCFile" />
+  </wsdl:message>
+  <wsdl:message name="getHSCFileResponse">
+    <wsdl:part name="parameters" element="tns:getHSCFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="findHSCFile">
+    <wsdl:part name="parameters" element="tns:findHSCFile" />
+  </wsdl:message>
+  <wsdl:message name="findHSCFileResponse">
+    <wsdl:part name="parameters" element="tns:findHSCFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="getFileForProcessing">
+    <wsdl:part name="parameters" element="tns:getFileForProcessing" />
+  </wsdl:message>
+  <wsdl:message name="getFileForProcessingResponse">
+    <wsdl:part name="parameters" element="tns:getFileForProcessingResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPacketsForFile">
+    <wsdl:part name="parameters" element="tns:getPacketsForFile" />
+  </wsdl:message>
+  <wsdl:message name="getPacketsForFileResponse">
+    <wsdl:part name="parameters" element="tns:getPacketsForFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="markAsProcessed">
+    <wsdl:part name="parameters" element="tns:markAsProcessed" />
+  </wsdl:message>
+  <wsdl:message name="markAsProcessedResponse">
+    <wsdl:part name="parameters" element="tns:markAsProcessedResponse" />
+  </wsdl:message>
+  <wsdl:portType name="hscfiles">
+    <wsdl:operation name="operation">
+      <wsdl:input message="tns:operation" />
+      <wsdl:output message="tns:operationResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="persist">
+      <wsdl:input message="tns:persist" />
+      <wsdl:output message="tns:persistResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="processHSCFile">
+      <wsdl:input message="tns:processHSCFile" />
+      <wsdl:output message="tns:processHSCFileResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getHSCFile">
+      <wsdl:input message="tns:getHSCFile" />
+      <wsdl:output message="tns:getHSCFileResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="findHSCFile">
+      <wsdl:input message="tns:findHSCFile" />
+      <wsdl:output message="tns:findHSCFileResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getFileForProcessing">
+      <wsdl:input message="tns:getFileForProcessing" />
+      <wsdl:output message="tns:getFileForProcessingResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getPacketsForFile">
+      <wsdl:input message="tns:getPacketsForFile" />
+      <wsdl:output message="tns:getPacketsForFileResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="markAsProcessed">
+      <wsdl:input message="tns:markAsProcessed" />
+      <wsdl:output message="tns:markAsProcessedResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="hscfilesPortBinding" type="tns:hscfiles">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="operation">
+      <ns41:PolicyReference xmlns:ns41="http://www.w3.org/ns/ws-policy" URI="#hscfilesPortBinding_operation_WSAT_Policy">
+      </ns41:PolicyReference>
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="persist">
+      <ns42:PolicyReference xmlns:ns42="http://www.w3.org/ns/ws-policy" URI="#hscfilesPortBinding_persist_WSAT_Policy">
+      </ns42:PolicyReference>
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processHSCFile">
+      <ns43:PolicyReference xmlns:ns43="http://www.w3.org/ns/ws-policy" URI="#hscfilesPortBinding_processHSCFile_WSAT_Policy">
+      </ns43:PolicyReference>
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHSCFile">
+      <ns44:PolicyReference xmlns:ns44="http://www.w3.org/ns/ws-policy" URI="#hscfilesPortBinding_getHSCFile_WSAT_Policy">
+      </ns44:PolicyReference>
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findHSCFile">
+      <ns45:PolicyReference xmlns:ns45="http://www.w3.org/ns/ws-policy" URI="#hscfilesPortBinding_findHSCFile_WSAT_Policy">
+      </ns45:PolicyReference>
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFileForProcessing">
+      <ns46:PolicyReference xmlns:ns46="http://www.w3.org/ns/ws-policy" URI="#hscfilesPortBinding_getFileForProcessing_WSAT_Policy">
+      </ns46:PolicyReference>
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPacketsForFile">
+      <ns47:PolicyReference xmlns:ns47="http://www.w3.org/ns/ws-policy" URI="#hscfilesPortBinding_getPacketsForFile_WSAT_Policy">
+      </ns47:PolicyReference>
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="markAsProcessed">
+      <ns48:PolicyReference xmlns:ns48="http://www.w3.org/ns/ws-policy" URI="#hscfilesPortBinding_markAsProcessed_WSAT_Policy">
+      </ns48:PolicyReference>
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="hscfilesService">
+    <wsdl:port name="hscfilesPort" binding="tns:hscfilesPortBinding">
+      <soap:address location="http://soap.hotschedules.com:8020/hsws/hscfiles" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

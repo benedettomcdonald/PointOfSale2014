@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<properties group="2" suffix="" map="">
+	<computer>127.0.0.1</computer>
+	<port>8020</port>
+	<hsSharedPort>9932</hsSharedPort>
+	<location>remote</location>
+  <useregistry>false</useregistry>
+</properties>

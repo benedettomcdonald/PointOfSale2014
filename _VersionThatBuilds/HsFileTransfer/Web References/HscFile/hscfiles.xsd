@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://adapter.ejb.hsconnect.hs.tdr3.com/" targetNamespace="http://adapter.ejb.hsconnect.hs.tdr3.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="findHSCFile" type="tns:findHSCFile" />
+  <xs:element name="findHSCFileResponse" type="tns:findHSCFileResponse" />
+  <xs:element name="getFileForProcessing" type="tns:getFileForProcessing" />
+  <xs:element name="getFileForProcessingResponse" type="tns:getFileForProcessingResponse" />
+  <xs:element name="getHSCFile" type="tns:getHSCFile" />
+  <xs:element name="getHSCFileResponse" type="tns:getHSCFileResponse" />
+  <xs:element name="getPacketsForFile" type="tns:getPacketsForFile" />
+  <xs:element name="getPacketsForFileResponse" type="tns:getPacketsForFileResponse" />
+  <xs:element name="markAsProcessed" type="tns:markAsProcessed" />
+  <xs:element name="markAsProcessedResponse" type="tns:markAsProcessedResponse" />
+  <xs:element name="operation" type="tns:operation" />
+  <xs:element name="operationResponse" type="tns:operationResponse" />
+  <xs:element name="persist" type="tns:persist" />
+  <xs:element name="persistResponse" type="tns:persistResponse" />
+  <xs:element name="processHSCFile" type="tns:processHSCFile" />
+  <xs:element name="processHSCFileResponse" type="tns:processHSCFileResponse" />
+  <xs:complexType name="markAsProcessed">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:hscFile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="hscFile">
+    <xs:sequence>
+      <xs:element name="binComplete" type="xs:boolean" />
+      <xs:element name="clientID" type="xs:int" />
+      <xs:element minOccurs="0" name="dateTime" type="xs:dateTime" />
+      <xs:element name="doProcess" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fileName" type="xs:string" />
+      <xs:element minOccurs="0" name="guid" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="hsp" nillable="true" type="tns:hscPacket" />
+      <xs:element name="id" type="xs:long" />
+      <xs:element name="isFlat" type="xs:boolean" />
+      <xs:element name="isProcessed" type="xs:boolean" />
+      <xs:element minOccurs="0" name="lockTime" type="xs:dateTime" />
+      <xs:element name="locked" type="xs:boolean" />
+      <xs:element name="processingRef" type="xs:int" />
+      <xs:element name="version" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="hscPacket">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="binData" type="xs:string" />
+      <xs:element name="id" type="xs:long" />
+      <xs:element minOccurs="0" name="packetData" type="xs:base64Binary" />
+      <xs:element name="recordId" type="xs:long" />
+      <xs:element name="seqNumber" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="markAsProcessedResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getHSCFile">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getHSCFileResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:hscFile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getPacketsForFile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:hscFile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getPacketsForFileResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="processHSCFile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:hscFile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="processHSCFileResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getFileForProcessing">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getFileForProcessingResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:hscFile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="persist">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="file" type="tns:hscFile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="persistResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findHSCFile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:hscFile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findHSCFileResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:hscFile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="operation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="parameter" type="tns:hscPacket" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="operationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:hscPacket" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

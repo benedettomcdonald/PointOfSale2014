@@ -1,0 +1,822 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>7.10.3077</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A930195D-D703-45A5-B969-391A6A6E0E9A}</ProjectGuid>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>hs.ico</ApplicationIcon>
+    <AssemblyKeyContainerName />
+    <AssemblyName>_hscnx</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HsConnect</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject />
+    <WebReference_EnableProperties>true</WebReference_EnableProperties>
+    <WebReference_EnableSQLTypes>false</WebReference_EnableSQLTypes>
+    <WebReference_EnableLegacyEventingModel>true</WebReference_EnableLegacyEventingModel>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ConvertDBF">
+      <HintPath>Lib\ConvertDBF.dll</HintPath>
+    </Reference>
+    <Reference Include="HsSharedObjects">
+      <Name>HsSharedObjects</Name>
+      <HintPath>..\lib\HsSharedObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.ALOHAMGRLib">
+      <HintPath>Lib\Interop.ALOHAMGRLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Data.Odbc">
+      <Name>Microsoft.Data.Odbc</Name>
+      <HintPath>..\lib\Microsoft.Data.Odbc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Services2">
+      <Name>Microsoft.Web.Services2</Name>
+      <HintPath>..\lib\Microsoft.Web.Services2.dll</HintPath>
+    </Reference>
+    <Reference Include="Nini">
+      <HintPath>Lib\Nini.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Configuration.Install">
+      <Name>System.Configuration.Install</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Management">
+      <Name>System.Management</Name>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting">
+      <Name>System.Runtime.Remoting</Name>
+    </Reference>
+    <Reference Include="System.ServiceProcess">
+      <Name>System.ServiceProcess</Name>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Client\CustomModule\ClientCustomModule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Client\CustomModule\ClientCustomModuleList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Client\Field\ClientField.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Client\Field\ClientFieldList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Client\Module\ClientModule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Client\Module\ClientModuleList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Client\Shift\ClientShift.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Client\Shift\ClientShiftList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\DataTableBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\HsData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\HsDataConnection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\HsDateTime.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\HsFile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\HsReader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\Micros9700Control.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\PosiControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\Punch2\Punch2Adjust.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\Punch2\Punch2Import.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\Punch2\Punch2Item.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\Punch2\Punch2TimeCard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\Punch2\Tokens.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmpJobs\EmpJob.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmpJobs\EmpJobImpl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmpJobs\EmpJobList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmpJobs\PosList\AlohaEmpJobList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmpJobs\PosList\AppleCoreEmpJobList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmpJobs\PosList\AppleDosEmpJobList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmpJobs\PosList\AppleOneEmpJobList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmpJobs\PosList\Micros9700EmpJobList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmpJobs\PosList\MicrosEmpJobList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmpJobs\PosList\PosiEmpJobList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmpJobs\PosList\RestMgrEmpJobList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Employees\Employee.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Employees\EmployeeList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Employees\EmployeeListEmpty.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Employees\EmployeeListImpl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Employees\EmployeeManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Employees\EmployeeStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Employees\EmpSyncManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Employees\GoHireEmpInsert.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Employees\GoHireEmpInsertList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Employees\HsEmployeeList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Employees\PhoneNumber.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Employees\PosList\AlohaEmployeeList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Employees\PosList\AppleCoreEmployeeList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Employees\PosList\AppleDosEmployeeList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Employees\PosList\AppleOneEmployeeList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Employees\PosList\Micros9700EmployeeList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Employees\PosList\MicrosEmployeeList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Employees\PosList\PosiEmployeeList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Employees\PosList\RestMgrEmployeeList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Employees\Workday\WorkdayEmpList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Employees\Workday\WorkdayEmployee.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Employees\Workday\WorkdayUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Forms\ApprovalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ControlPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SalesDateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TrayIcon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Wizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GuestCounts\GCWeek.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GuestCounts\GuestCountItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GuestCounts\GuestCountList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GuestCounts\GuestCountListImpl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GuestCounts\PosList\AlohaGuestCountList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GuestCounts\PosList\CarinosCustomList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GuestCounts\PosList\EmptyGuestCountList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GuestCounts\PosList\MicrosGuestCountList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HistoricalSales\HistoricalSalesItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HistoricalSales\HistoricalSalesItemList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HistoricalSales\HistoricalSalesItemListImpl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HistoricalSales\HistoricalSalesManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HistoricalSales\PosList\AlohaHistSalesItems.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HistoricalSales\PosList\PosiHistSalesItems.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Jobs\HsJobList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Jobs\Job.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Jobs\JobList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Jobs\JobListEmpty.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Jobs\JobListImpl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Jobs\JobManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Jobs\PosList\AlohaJobList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Jobs\PosList\AppleCoreJobList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Jobs\PosList\AppleDosJobList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Jobs\PosList\AppleOneJobList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Jobs\PosList\Micros9700JobList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Jobs\PosList\MicrosJobList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Jobs\PosList\PosiJobList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Jobs\PosList\RestMgrJobList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Jobs\Role.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Jobs\RoleList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Machine\HsProcess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Machine\Identification.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Main\ClientSyncManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Main\HsCnxService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main\HsSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Main\LoadClient.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Main\LoginManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Main\RemoteLogger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Main\Run.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Main\SyncManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Main\SysLog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Main\Timers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\ApprovalAlertModule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\CarinosGuestCount.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\CcfDeviceModule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\EmployeeDataModule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\FileTransferModule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\GuestCountModule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\HistoricalSalesModule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\LaborItemModule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\MicrosCoverCount.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\Module.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\ModuleImpl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\NetSalesModule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\PeriodLabor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\PosTimeCardImportModule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\PunchRecordModule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\RegClockInModule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\SalesVerification.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\ScheduleDbfModule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProjectInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SalesItems\PosList\AlohaSalesItemList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SalesItems\PosList\AppleDosSalesItemList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SalesItems\PosList\AppleOneSalesItemList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SalesItems\PosList\Micros9700SalesItemList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SalesItems\PosList\MicrosSalesItemList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SalesItems\PosList\PosiSalesItemList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SalesItems\PosList\RestMgrSalesItemList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SalesItems\RevenueCenter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SalesItems\SalesCategory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SalesItems\SalesItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SalesItems\SalesItemList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SalesItems\SalesItemListImpl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SalesItems\SalesItemsManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SalesItems\SalesStartDate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SalesItems\SalesWeek.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Schedules\HsScheduleList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Schedules\Schedule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\ClientVerifyService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\RemoteLogService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\Wss\CarinosCustomWss.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\Wss\ClientEmployeeWss.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\Wss\ClientJobsWss.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\Wss\ClientSalesWss.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\Wss\ClientSettingsWss.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\Wss\PunchRecordService.cs">
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="Services\Wss\ScheduleWss.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\Wss\TimeCardWss.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shifts\Forecast\ForecastDataRow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shifts\Forecast\ForecastImport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shifts\Forecast\ForecastShift.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shifts\Forecast\ForecastShiftList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shifts\Pos\AlohaScheduleImport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shifts\Pos\AppleCoreScheduleImport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shifts\Pos\AppleDosScheduleImport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shifts\Pos\AppleOneScheduleImport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shifts\Pos\DigitalDiningScheduleImport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shifts\Pos\EverServScheduleImport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shifts\Pos\FocusPOSScheduleImport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shifts\Pos\Micros9700ScheduleImport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shifts\Pos\MicroSaleScheduleImport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shifts\Pos\MicrosScheduleImport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shifts\Pos\OnePOSScheduleImport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shifts\Pos\PosiScheduleImport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shifts\Pos\RestMgrScheduleImport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shifts\Pos\SquirrelScheduleImport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shifts\Pos\TCPlusScheduleImport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shifts\Pos\TestScheduleImport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shifts\ScheduleImport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shifts\ScheduleImportImpl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shifts\ScheduleImportManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shifts\Shift.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shifts\ShiftList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TimeCards\ClientEmployeeWaiverList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TimeCards\HsTimeCardList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TimeCards\PosList\AlohaTimeCardList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TimeCards\PosList\AppleDosTimeCardList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TimeCards\PosList\AppleOneImport\AppleOneTimeCard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TimeCards\PosList\AppleOneImport\CARules.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TimeCards\PosList\AppleOneImport\CsvImport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TimeCards\PosList\AppleOneImport\OTRules.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TimeCards\PosList\AppleOneImport\StandardRules.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TimeCards\PosList\AppleOneTimeCardList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TimeCards\PosList\Micros9700TimeCardList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TimeCards\PosList\MicrosTimeCardList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TimeCards\PosList\Old_PosiTimeCardList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TimeCards\PosList\PosiTimeCardList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TimeCards\PosList\RestMgrTimeCardList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TimeCards\PunchRecordUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TimeCards\TimeCard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TimeCards\TimeCardImport\AlohaTimeCardImport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TimeCards\TimeCardImport\PosiTimeCardImport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TimeCards\TimeCardList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TimeCards\TimeCardListBlank.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TimeCards\TimeCardListImpl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TimeCards\TimeCardManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Xml\HsXmlReader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="App.ico" />
+    <Content Include="hs-on.ico" />
+    <Content Include="hs.ico" />
+    <Content Include="properties.xml" />
+    <Content Include="tray-icon.ico" />
+    <EmbeddedResource Include="Forms\ApprovalForm.resx">
+      <DependentUpon>ApprovalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ControlPanel.resx">
+      <DependentUpon>ControlPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SalesDateForm.resx">
+      <DependentUpon>SalesDateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TrayIcon.resx">
+      <DependentUpon>TrayIcon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Wizard.resx">
+      <DependentUpon>Wizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="icon1.ico" />
+    <EmbeddedResource Include="icon2.ico" />
+    <EmbeddedResource Include="Main\HsCnxService.resx">
+      <DependentUpon>HsCnxService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectInstaller.resx">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="alohaSales.ini" />
+    <None Include="app.config" />
+    <WebReferences Include="Web References\" />
+    <WebReferenceUrl Include="http://172.16.143.185:8080/hscfilesService/hscfiles%3fwsdl">
+      <RelPath>Web References\HscFile\</RelPath>
+      <UrlBehavior>Static</UrlBehavior>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Client\NewFolder1\" />
+    <Folder Include="Lib\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HsError\HsError.csproj">
+      <Project>{f25731bc-b57e-40ff-bf95-87ec8af5ff4b}</Project>
+      <Name>HsError</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HsExecuteModule\HsExecuteModule.csproj">
+      <Project>{7062b99a-d270-4425-9774-ba79b435a4b5}</Project>
+      <Name>HsExecuteModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HsFileTransfer\HsFileTransfer.csproj">
+      <Project>{1967a2d7-684c-49af-9b6c-39d7364e3b15}</Project>
+      <Name>HsFileTransfer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HsProperties\HsProperties.csproj">
+      <Project>{94e307ef-d134-422e-be65-a1e275ed50e3}</Project>
+      <Name>HsProperties</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\pslbr\pslbr.csproj">
+      <Project>{7b256864-b922-4b57-a575-c9f0922e4dd7}</Project>
+      <Name>pslbr</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>

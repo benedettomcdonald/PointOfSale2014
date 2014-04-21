@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>7.10.3077</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8721E0A6-25D2-47D8-832D-6AA1E7C1CCAF}</ProjectGuid>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon />
+    <AssemblyKeyContainerName />
+    <AssemblyName>HsSharedObjects</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>HsSharedObjects</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\lib\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\lib\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HsProperties">
+      <Name>HsProperties</Name>
+      <HintPath>..\lib\HsProperties.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Services2">
+      <Name>Microsoft.Web.Services2</Name>
+      <HintPath>..\lib\Microsoft.Web.Services2.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Management">
+      <Name>System.Management</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Client\ClientDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Client\CustomModule\ClientCustomModule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Client\CustomModule\ClientCustomModuleList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Client\Field\ClientField.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Client\Field\ClientFieldList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Client\Module\ClientModule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Client\Module\ClientModuleList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Client\Preferences\Preference.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Client\Preferences\PreferenceList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Client\Shift\ClientShift.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Client\Shift\ClientShiftList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CsvFile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HsShared.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Machine\HsProcess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Machine\Identification.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Main\HsSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Main\SysLog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MapFile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SharedEmployee.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SharedJob.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SharedSchedule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WizardShared.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>
